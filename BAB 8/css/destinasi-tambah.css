@@ -1,0 +1,118 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+.header {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+.form {
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+.submit-button:hover {
+    background-color: #218838;
+}
+.toast {
+    visibility: hidden;
+    position: absolute;
+    bottom: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+}
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+#Popup {
+    display: none;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid #333;
+    padding: 20px;
+}
+#Popup p {
+    margin: 5px 0;
+}
+@media (max-width: 375px) {
+    .container {
+        width: 80%;
+        height: 63%;
+        margin: 0 auto;
+    }
+    .form-group {
+        height: auto;
+        margin-bottom: auto;
+    }
+    .form-group label {
+        height: auto;
+        margin-bottom: auto;
+    }
+    .submit-button {
+        margin-top: 5px;
+    }
+    .toast {
+        font-size: 80%;
+        bottom: 28%;
+    }
+    #Popup {
+        top: 48%;
+    }
+    #Popup p {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,174 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_img {
+    width: 524px;
+    height: 456px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    background-color: #ffffff;
+    right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_img h2 {
+    font-size: 35px;
+    color: #070707;
+    margin-bottom: 10px;
+}
+
+.card_img img {
+    width: 80%;
+    object-fit: cover;
+}
+
+.card_login {
+    width: 627px;
+    height: 426px;
+    border-radius: 20px;
+    box-shadow: 0 0px 45px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_login h2 {
+    color: #f28b30;
+    margin-bottom: 20px;
+}
+
+.card_login input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: none;
+    outline: none;
+}
+
+.card_login button {
+    background: linear-gradient(to right, #f28b30, #f7c04a);
+    border: none;
+    padding: 10px 100px;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.card_login a {
+    display: inline-block;
+    font-size: 10px;
+    color: #000;
+    text-decoration: none;
+    margin: 20px 45px;
+}
+
+.card_login a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.card_login .form_container {
+    width: 320px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    left: 50px;
+}
+
+@media only screen and (max-width: 300px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card_img {
+        visibility: hidden;
+    }
+
+    .card_login {
+        width: 80%;
+        height: 290px;
+        left: 12%;
+    }
+
+    .card_login .form_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card_login a {
+        display: inline-block;
+        font-size: 10px;
+        color: #000;
+        text-decoration: none;
+        margin: 20px 35px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card_img {
+        visibility: hidden;
+    }
+
+    .card_login {
+        width: 80%;
+        height: 290px;
+        left: auto;
+    }
+
+    .card_login .form_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card_login a {
+        display: inline-block;
+        font-size: 10px;
+        color: #000;
+        text-decoration: none;
+        margin: 20px 35px;
+    }
+}
