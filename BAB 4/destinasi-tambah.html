@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="destinasi-tambah.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Tambah Data</h2>
+        </div>
+        <form class="form" id="dataForm">
+            <div class="form-group">
+                <label for="destinasi">Destinasi</label>
+                <input type="file" id="destinasi" name="destinasi" required>
+            </div>
+            <div class="form-group">
+                <label for="namaDestinasi">Nama Destinasi</label>
+                <input type="text" id="namaDestinasi" name="nama destinasi" required>
+            </div>
+            <div class="form-group">
+                <label for="lokasi">Lokasi</label>
+                <input type="text" id="lokasi" name="lokasi" required>
+            </div>
+            <div class="form-group">
+                <label for="deskripsi">Deskripsi</label>
+                <input type="text" id="deskripsi" name="deskripsi" accept="image/*">
+            </div>
+            <button type="submit" class="submit-button">Tambah</button>
+        </form>
+    </div>
+    <div id="Popup"></div>
+    <div id="toast" class="toast">Berhasil ditambahkan!</div>
+    <script>
+        const form = document.getElementById('dataForm');
+        const Popup = document.getElementById('Popup');
+        const toast = document.getElementById('toast');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const destinasi = document.getElementById('destinasi').value;
+            const namaDestinasi = document.getElementById('namaDestinasi').value;
+            const lokasi = document.getElementById('lokasi').value;
+            const deskripsi = document.getElementById('deskripsi').value;
+
+            if (destinasi && namaDestinasi && lokasi && deskripsi) {
+                Popup.innerHTML = `
+                    <p>Destinasi: ${destinasi}</p>
+                    <p>Nama Destinasi: ${namaDestinasi}</p>
+                    <p>Lokasi: ${lokasi}</p>
+                    <p>Deskripsi: ${deskripsi}</p>`;
+                Popup.style.display = 'block';
+
+                Popup.classList.add('show');
+                setTimeout(() => {
+                    Popup.style.display = 'none';
+                    form.reset()
+                }, 1500);
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 1500);
+            } else {
+                alert('harap diisi!!');
+            }
+        });
+    </script>
+</body>
+</html>
