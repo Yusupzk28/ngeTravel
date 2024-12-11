@@ -1,0 +1,103 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #000;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-right: 0.25rem;
+}
+
+.logo-image {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.main-content {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.table-of-contents {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 1rem; /* Spacing between the boxes */
+    justify-content: space-between; /* Distribute the space evenly */
+}
+
+.package-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 28%; /* This ensures that 3 boxes fit into one row */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.package-box:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.package-box h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.package-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.package-box ul li {
+    padding: 5px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.package-box ul li.active {
+    font-weight: bold;
+    color: #ff7f50;
+}
+
+@media (max-width: 768px) {
+    .package-box {
+        width: 100%; /* On smaller screens, each box will take the full width */
+    }
+}
